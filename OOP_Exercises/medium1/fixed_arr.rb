@@ -1,6 +1,30 @@
 # A fixed-length array is an array that always has a fixed number of elements. Write a class that implements a fixed-length array, and provides the necessary methods to support the following code:
 # The below code should output true 16 times.
 
+class FixedArray
+  attr_accessor :array
+
+  def initialize(num)
+    @array = [nil]*num
+  end 
+
+  def []=(index, new_value)
+    self[index]
+    array[index] = new_value
+  end
+
+  def [](index)
+    array.fetch(index)
+  end
+
+  def to_a
+    array
+  end
+  
+  def to_s
+    "#{array}"
+  end
+end
 
 fixed_array = FixedArray.new(5)
 puts fixed_array[3] == nil
