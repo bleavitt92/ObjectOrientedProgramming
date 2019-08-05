@@ -13,5 +13,16 @@ class GoodDog < Animal
   end
 end
 
-bruno = GoodDog.new("brown")
-p bruno
+class Parent
+  def say
+    p "I'm the parent"
+  end
+end
+
+class Child < Parent
+  def say(message)
+    super()
+  end
+end
+
+Child.new.say('Hi!')

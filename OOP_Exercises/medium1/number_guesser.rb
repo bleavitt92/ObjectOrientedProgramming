@@ -2,8 +2,9 @@
 require 'pry'
 
 class GuessingGame
+  private
   attr_accessor :num_guesses, :guess
-  attr_reader :number
+  attr_reader :secret_number
 
   def initialize
     @num_guesses = 7
@@ -52,6 +53,7 @@ class GuessingGame
     end
   end
 
+  public
   def play
     loop do 
       display_guesses_left
